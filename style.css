@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 
+:root{
+    --amarelo:#ffc526;
+    --marrom: #1d1308;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +36,7 @@ html {
 
 .navbar.sticky{
     padding: 15px 0;
-    background: #B71954;
+    background: var(--amarelo);
 }
 
 .navbar .max-width {
@@ -46,12 +52,12 @@ html {
 }
 
 .navbar .logo a span {
-    color: #B71954;
+    color: var(--amarelo);
     transition: all 0.3s ease;
 }
 
 .navbar.sticky .logo a span {
-    color: #112027;
+    color: var(--marrom);
 }
 
 .navbar .menu li {
@@ -69,11 +75,11 @@ html {
 }
 
 .navbar .menu li a:hover{
-    color: #B71954;
+    color: var(--amarelo);
 }
 
 .navbar.sticky .menu li a:hover {
-    color: #112027;
+    color: var(--marrom);
 }
 
 /* menu btn styling */
@@ -89,7 +95,7 @@ html {
    position: fixed;
    height: 45px;
    width: 42px;
-   background: #B71954;
+   background: var(--amarelo);
    right: 30px;
    bottom: 10px; 
    text-align: center;
@@ -110,17 +116,22 @@ html {
     pointer-events: auto;
 }
 
+.scroll-up-btn:hover{
+    color: #1d1308;
+}
+
 /* home section styling */
 
 .home {
     display: flex;
-    background: url(img/banner.png) no-repeat center;
+    background: url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
     color: #fff;
     min-height: 500px;
     font-family: 'Ubuntu', sans-serif;
+    filter: blur(5);
 }
 
 .home .max-width {
@@ -129,12 +140,14 @@ html {
 
 .home .home-content .text-1{
     font-size: 27px;
+    font-weight: 500;;
 }
 
 .home .home-content .text-2{
     font-size: 75px;
     font-weight: 600;
     margin-left: -3px;
+    color: var(--amarelo);
 }
 
 .home .home-content .text-3{
@@ -143,25 +156,27 @@ html {
 }
 
 .home .home-content .text-3 span{
-    color: #B71954;
+    color: var(--amarelo);
     font-weight: 500;
 }
 
 .home .home-content a {
     display: inline-block;
-    background: #B71954;
-    color: #fff;
+    background: var(--amarelo);
+    color: var(--marrom);
     font-size: 25px;
+    font-weight: 500;
     padding: 12px 36px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid #B71954;
+    border: 2px solid var(--amarelo);
     transition: all 0.3s ease;
 }
 
 .home .home-content a:hover {
-    color: #B71954;
+    color: #fff;
     background: none;
+    font-weight: 500;
 } 
 
 /* all similar content styling code */
@@ -201,7 +216,7 @@ section .title::before {
     left: 50%;
     width: 180px;
     height: 3px;
-    background: #112027;
+    background: var(--marrom);
     transform: translateX(-50%);
 }
 
@@ -210,7 +225,7 @@ section .title::after {
     bottom: -12px;
     left: 50%;
     font-size: 20px;
-    color: #B71954;
+    color: var(--amarelo);
     padding: 5px;
     background: #fff;
     transform: translateX(-50%);
@@ -219,7 +234,7 @@ section .title::after {
 /* about section styling */
 
 .about .title::after {
-    content: "who i am";
+    content: "Quem somos";
 }
 
 .about .about-content .left {
@@ -244,7 +259,7 @@ section .title::after {
 }
 
 .about .about-content .right .text span{
-    color: #B71954;
+    color: var(--amarelo);
 }
 
 .about .about-content .right p{
@@ -253,27 +268,28 @@ section .title::after {
 
 .about .about-content .right a{
     display: inline-block;
-    background: #B71954;
+    background: var(--amarelo);
     color: #fff;
     font-size: 20px;
     font-weight: 500;
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid #B71954;
+    border: 2px solid var(--amarelo);
     transition: all 0.3s ease;
 }
 
 .about .about-content .right a:hover {
     background: none;
-    color: #B71954;
+    color: var(--marrom);
+    border: 2px solid var(--marrom);
 }
 
 /* services section styling */
 
 .services, .teams {
     color: #fff;
-    background: #112027;
+    background: var(--marrom);
 }
 
 .services .title::before,
@@ -283,22 +299,23 @@ section .title::after {
 
 .services .title::after,
 .teams .title::after {
-    background: #112027;
-    content: "what i provide";
+    background: var(--marrom);
+    content: "O que fazemos";
 }
 
 .services .serv-content .card {
     width: calc(33% - 20px);
-    background: #1d323c;
+    background: #140a06;
     text-align: center;
     border-radius: 6px;
     padding: 20px 25px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 .services .serv-content .card:hover {
-    background: #B71954;
+    background: var(--amarelo);
+    color: var(--marrom);
 }
 
 .services .serv-content .card .box {
@@ -311,12 +328,12 @@ section .title::after {
 
 .services .serv-content .card i {
     font-size: 50px;
-    color: #B71954;
+    color: var(--amarelo);
     transition: color 0.3s ease;
 }
 
 .services .serv-content .card:hover i{
-    color: #fff;
+    color: var(--marrom);
 }
 
 .services .serv-content .card .text {
@@ -347,19 +364,19 @@ section .title::after {
 
 .skills .skills-content .left a {
     display: inline-block;
-    background: #B71954;
+    background: var(--amarelo);
     color: #fff;
     font-size: 18px;
     font-weight: 500;
     padding: 8px 16px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid #B71954;
+    border: 2px solid var(--amarelo);
     transition: all 0.3s ease;
 }
 
 .skills .skills-content .left a:hover {
-    color: #B71954;
+    color: var(--amarelo);
     background: none;
 }
 
@@ -392,7 +409,7 @@ section .title::after {
     height: 100%;
     left: 0;
     top: 0;
-    background: #B71954;
+    background: var(--amarelo);
 }
 
 .skills-content .right .html::before {
@@ -418,7 +435,7 @@ section .title::after {
 }
 
 .teams .carousel .card {
-    background: #1d323c;
+    background: #140a06;
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
@@ -426,7 +443,8 @@ section .title::after {
 }
 
 .teams .carousel .card:hover {
-    background: #B71954;
+    background: var(--amarelo);
+    color: var(--marrom);
 }
 
 .teams .carousel .card .box {
@@ -452,12 +470,12 @@ section .title::after {
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid #B71954;
+    border: 5px solid var(--amarelo);
     transition: all 0.3s ease;
 }
 
 .teams .carousel .card:hover img {
-    border-color: #fff;
+    border-color: var(--marrom);
 }
 
 .owl-dots {
@@ -471,7 +489,7 @@ section .title::after {
     margin: 0 5px;
     outline: none!important;
     border-radius: 50%;
-    border: 2px solid #B71954!important;
+    border: 2px solid var(--amarelo)!important;
     transition: all 0.3s ease;
 }
 
@@ -482,13 +500,17 @@ section .title::after {
 
 .owl-dot.active, 
 .owl-dot:hover {
-    background: #B71954!important;
+    background: var(--amarelo)!important;
 }
 
 /* contact section styling */
 
 .contact .title::after {
-    content: "get in touch";
+    content: "fale comigo";
+}
+
+.contact .title::before{
+    color: #1d1308;
 }
 
 .contact .contact-content .column {
@@ -521,7 +543,7 @@ section .title::after {
 
 .contact .contact-content .row i {
     font-size: 25px;
-    color: #B71954;
+    color: var(--amarelo);
 }
 
 .contact .contact-content .info .head {
@@ -529,11 +551,11 @@ section .title::after {
 }
 
 .contact .contact-content .info .sub-title {
-    color: #1d323c;
+    color: var(--marrom);
 }
 
 .contact .contact-content .info .sub-title a {
-    color: #B71954;
+    color: var(--amarelo);
 }
 
 .contact .right form .fields {
@@ -585,9 +607,9 @@ section .title::after {
 .contact .right form .button button {
     width: 100%;
     height: 100%;
-    border: 2px solid #B71954;
+    border: 2px solid var(--amarelo);
     border-radius: 6px;
-    background: #B71954;
+    background: var(--amarelo);
     color: #fff;
     font-size: 20px;
     font-weight: 500;
@@ -596,20 +618,27 @@ section .title::after {
 }
 
 .contact .right form .button button:hover {
-    color: #B71954;
+    color: var(--amarelo);
     background: none;
+}
+
+.contact .right img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 6px;
 }
 
 /* footer section styling */
 
 footer {
-    background: #112027;
+    background: var(--marrom);
     padding: 20px 23px;
     color: #fff;
 }
 
 footer span a {
-    color: #B71954;
+    color: var(--amarelo);
     text-decoration: none;
 }
 
@@ -635,7 +664,7 @@ footer ul li a {
 }
 
 footer ul li a:hover {
-    color: #B71954;
+    color: var(--amarelo);
 }
 
 
@@ -680,7 +709,7 @@ footer ul li a:hover {
         width: 100%;
         left: -100%;
         top: 0;
-        background-color: #112027;
+        background-color: var(--marrom);
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
@@ -695,6 +724,9 @@ footer ul li a:hover {
         display: inline-block;
         margin: 20px 0;
         font-size: 25px;
+    }
+    .navbar .menu li a:hover{
+        color: #ffc526;
     }
     .home .home-content .text-2{
         font-size: 70px;
